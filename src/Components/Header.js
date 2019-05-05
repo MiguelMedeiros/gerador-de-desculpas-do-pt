@@ -8,15 +8,13 @@ import MenuIcon from "@material-ui/icons/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faYoutube, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faQuestion,
-  faInfo,
   faHandHoldingUsd,
-  faBook,
+  faOutdent,
 } from "@fortawesome/free-solid-svg-icons";
 import Headroom from "react-headroom";
-import Button from "@material-ui/core/Button";
 
 class Header extends Component {
   state = {
@@ -40,24 +38,10 @@ class Header extends Component {
           <Toolbar>
             <div className="logo">
               <a href="/" className="navlink">
-                Imposto é roubo?
+                Gerador de Desculpas do PT
               </a>
             </div>
             <div className="grow" />
-            <div className="menu-desktop">
-              <NavLink to={"/libertarios"} className="navlink">
-                <Button className="button" color="inherit">
-                  <FontAwesomeIcon className="fa-icon" icon={faYoutube} />
-                  Canais
-                </Button>
-              </NavLink>
-              <NavLink to={"/biblioteca"} className="navlink">
-                <Button className="button" color="inherit">
-                  <FontAwesomeIcon className="fa-icon" icon={faBook} />
-                  Biblioteca
-                </Button>
-              </NavLink>
-            </div>
             <div>
               <IconButton
                 aria-owns={open ? "menu-appbar" : undefined}
@@ -83,37 +67,26 @@ class Header extends Component {
                 onClose={this.handleClose}
               >
                 <MenuItem onClick={this.handleClose}>
-                  <NavLink to={"/"} className="navlink">
-                    <FontAwesomeIcon className="fa-icon" icon={faQuestion} />
-                    Imposto é roubo?
-                  </NavLink>
-                </MenuItem>
-                <MenuItem onClick={this.handleClose}>
                   <a
-                    href="https://www.eticaargumentativa.com/"
+                    href="https://www.dilmesipsum.com.br/"
+                    rel="noopener noreferrer"
+                    target="_blank"
                     className="navlink"
                   >
-                    <FontAwesomeIcon className="fa-icon" icon={faQuestion} />O
-                    que é ética argumentativa?
+                    <FontAwesomeIcon className="fa-icon" icon={faOutdent} />
+                    Veja também o <b>Dilmês Ipsum</b>
                   </a>
                 </MenuItem>
                 <MenuItem onClick={this.handleClose}>
-                  <NavLink to={"/sobre"} className="navlink">
-                    <FontAwesomeIcon className="fa-icon" icon={faInfo} />
-                    Porque esse site existe?
-                  </NavLink>
-                </MenuItem>
-                <MenuItem onClick={this.handleClose}>
-                  <NavLink to={"/libertarios"} className="navlink">
-                    <FontAwesomeIcon className="fa-icon" icon={faYoutube} />
-                    Conheça canais Libertários.
-                  </NavLink>
-                </MenuItem>
-                <MenuItem onClick={this.handleClose}>
-                  <NavLink to={"/biblioteca"} className="navlink">
-                    <FontAwesomeIcon className="fa-icon" icon={faBook} />
-                    Biblioteca Libertária
-                  </NavLink>
+                  <a
+                    href="https://www.impostoeroubo.com/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="navlink"
+                  >
+                    <FontAwesomeIcon className="fa-icon" icon={faQuestion} />
+                    Você acha que <b>Imposto é roubo</b>?
+                  </a>
                 </MenuItem>
                 <MenuItem onClick={this.handleClose}>
                   <NavLink to={"/contribua"} className="navlink">
@@ -121,18 +94,18 @@ class Header extends Component {
                       className="fa-icon"
                       icon={faHandHoldingUsd}
                     />
-                    Faça uma doação!
+                    Existe almoço grátis?
                   </NavLink>
                 </MenuItem>
                 <MenuItem onClick={this.handleClose}>
                   <a
-                    href="https://github.com/MiguelMedeiros/imposto-e-roubo"
+                    href="https://github.com/MiguelMedeiros/gerador-de-desculpas-do-pt"
                     rel="noopener noreferrer"
                     target="_blank"
                     className="navlink"
                   >
                     <FontAwesomeIcon className="fa-icon" icon={faGithub} />
-                    Repositório no Github.
+                    Contribua com código.
                   </a>
                 </MenuItem>
                 <MenuItem onClick={this.handleClose}>

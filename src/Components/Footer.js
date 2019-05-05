@@ -13,12 +13,10 @@ class Footer extends Component {
       >
         <Toolbar>
           <a
-            href="https://www.impostoeroubo.com/"
-            rel="noopener noreferrer"
-            target="_blank"
+            href="https://www.geradordedesculpasdopt.com.br/"
             className="navlink"
           >
-            <b>imposto</b>e<b>roubo</b>.com
+            <b>Gerador</b>de<b>Desculpas</b>do<b>PT</b>.com.br
           </a>
           <div className="grow" />
           <a
